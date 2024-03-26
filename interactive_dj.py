@@ -4,14 +4,13 @@ import time
 from enum import Enum
 
 
-
-class OSC_CLIENTS(Enum):
+class DAW_TYPES(Enum):
     WAVEFORM = "waveform"
     ABLETON = "ableton"
 
 class InteractiveDJ:
-    def __init__(self, osc_client = OSC_CLIENTS.WAVEFORM):
-        if osc_client == OSC_CLIENTS.WAVEFORM:
+    def __init__(self, daw_type = DAW_TYPES.WAVEFORM):
+        if daw_type == DAW_TYPES.WAVEFORM:
             self.osc_client = WaveformOscControl()
         else:
             self.osc_client = AbletonOscControl()
