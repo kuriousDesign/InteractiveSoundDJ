@@ -78,7 +78,7 @@ def main():
         while True:
             # Send notes message
             
-            midi_control.send_notes(85,1)
+            midi_control.send_notes(56,1)
             
             time.sleep(1)
         print("notes sent")
