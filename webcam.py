@@ -2,7 +2,7 @@ import cv2
 import mediapipe as mp
 import numpy as np
 import rtmidi
-from rtmidi.midiconstants import (CONTROL_CHANGE)
+#from rtmidi.midiconstants import (CONTROL_CHANGE)
 import time
 import random
 from interactive_dj import *
@@ -15,7 +15,7 @@ to_ableton = 11000
 from_ableton = 11001
 client = SimpleUDPClient(ip, to_ableton)
 
-midiout = rtmidi.MidiOut()
+#midiout = rtmidi.MidiOut()
 #midiout.open_port(2)
 
 interactive_dj = InteractiveDJ()
@@ -44,7 +44,7 @@ def send_notes(pitch=60, repeat=1):
         #midiout.send_message(note_off)
 
 def send_mod(cc=1, value=0):
-    mod1 = ([CONTROL_CHANGE | 0, cc, value])
+    #mod1 = ([CONTROL_CHANGE | 0, cc, value])
     print(value)
     if value > 0.0:
         #midiout.send_message(mod1)
