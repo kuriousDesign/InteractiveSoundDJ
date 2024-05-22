@@ -15,7 +15,8 @@ class InteractiveDJ:
         else:
             self.osc_client = AbletonOscControl()
 
-        self.midi_control = MidiControl()
+        name = "VirMIDI 2-0"
+        self.midi_control = MidiControl(name)
 
     def start_song(self):
         self.osc_client.start_transport()
