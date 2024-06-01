@@ -4,6 +4,13 @@ import time
 from enum import Enum
 
 
+# LINUX/UBUNTU
+# sudo modprobe snd-virmidi # to load the virtual midi driver
+# aconnect -o # to list the midi devices
+
+# 
+# 
+
 class DAW_TYPES(Enum):
     WAVEFORM = "waveform"
     ABLETON = "ableton"
